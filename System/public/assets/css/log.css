@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+
+/* Adjust the width of the input fields and the container */
+.form-control {
+    max-width: 400px; /* Set max-width for input fields */
+}
+.box-area {
+    max-width: 600px; /* Adjust the overall box width */
+}
