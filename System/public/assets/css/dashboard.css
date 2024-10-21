@@ -1,0 +1,23 @@
+/* Sidebar Styles */
+.sidebar {
+    background-color: #897b7b; /* Gray-800 */
+}
+
+.sidebar a {
+
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #4B5563; /* Gray-600 */
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Chart Container Styles */
+.chart-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgb(88, 78, 78);
+}

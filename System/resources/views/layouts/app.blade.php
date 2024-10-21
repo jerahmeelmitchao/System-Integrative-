@@ -10,6 +10,8 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="/assets/css/dashboard.css">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -29,8 +31,21 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                @yield('content') <!-- This is where child views can inject their content -->
             </main>
         </div>
+
+        <!-- Copyright Footer -->
+        <footer class="text-center mt-5">
+            <p>&copy; <span id="currentYear"></span> Jerahmeel Mitchao. All rights reserved.</p>
+        </footer>
+
+        <script>
+            // JavaScript to dynamically set the current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="/assets/js/dash.js"></script>
     </body>
 </html>

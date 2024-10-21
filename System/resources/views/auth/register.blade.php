@@ -5,13 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    
-    <title>Laravel Registration</title>
-    <style>
-        .register-container {
-            max-width: 900px; /* Adjust this value to change width */
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/log.css">
+    <title> Registration</title>
+   
 </head>
 
 <body>
@@ -106,28 +102,8 @@
 
     </div>
 
-    <script>
-        // Hide error messages after 2 seconds
-        document.addEventListener('DOMContentLoaded', function () {
-            const errorMessages = document.getElementById('error-messages');
-
-            // Check if there are any error messages
-            if (errorMessages && errorMessages.childElementCount > 0) {
-                // Display the error messages
-                errorMessages.style.display = 'block';
-
-                // Set a timeout to hide the messages after 2 seconds
-                setTimeout(() => {
-                    errorMessages.style.display = 'none';
-                }, 2000);
-            }
-
-            // Add an event listener to the form to hide messages when submitting
-            document.getElementById('registration-form').addEventListener('submit', function() {
-                errorMessages.style.display = 'none'; // Hide error messages when form is submitted
-            });
-        });
-    </script>
+  
 
 </body>
+<script src="/assets/js/register.js"></script>
 </html>

@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    
-    <title>Laravel Login</title>
-    <style>
-        .login-container {
-            max-width: 900px; /* Adjust this value to change width */
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/log.css">
+    <title>Login</title>
+
 </head>
+
 <body>
 
     <!----------------------- Main Container -------------------------->
@@ -48,13 +46,13 @@
                     {{-- Error Messages --}}
                     <div class="mb-3" id="error-messages" style="display: none;">
                         @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul class="mb-0">
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                         @endif
                     </div>
 
@@ -65,13 +63,13 @@
                         {{-- Email Input --}}
                         <div class="input-group mb-3">
                             <x-text-input id="email" class="form-control form-control-lg bg-light fs-6" type="email" name="email" placeholder="Email Address" :value="old('email')" required autofocus />
-                           
+
                         </div>
 
                         {{-- Password Input --}}
                         <div class="input-group mb-3">
                             <x-text-input id="password" class="form-control form-control-lg bg-light fs-6" type="password" name="password" placeholder="Password" required />
-                          
+
                         </div>
 
                         {{-- Remember Me --}}
@@ -85,7 +83,7 @@
                         {{-- Forgot Password --}}
                         <div class="d-flex justify-content-between mb-3">
                             @if (Route::has('password.request'))
-                                <a href="{{ route('password.request') }}" class="text-decoration-none">{{ __('Forgot your password?') }}</a>
+                            <a href="{{ route('password.request') }}" class="text-decoration-none">{{ __('Forgot your password?') }}</a>
                             @endif
                         </div>
 
@@ -99,10 +97,12 @@
 
                     {{-- Google Sign-In Option --}}
                     <div class="input-group mb-3">
-                        <button class="btn btn-lg btn-light w-100 fs-6">
-                            <img src="/assets/images/google.png" style="width:20px" class="me-2"><small>Sign in with Google</small>
-                        </button>
+                        <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1" target="_blank" class="btn btn-lg btn-light w-100 fs-6">
+                            <img src="/assets/images/google.png" style="width:20px" class="me-2">
+                            <small>Sign in with Google</small>
+                        </a>
                     </div>
+
 
                     <div class="row">
                         <small>Don't have an account? <a href="{{ route('register') }}">Register</a></small>
@@ -113,28 +113,8 @@
         </div>
     </div>
 
-    <script>
-        // Hide error messages after 2 seconds
-        document.addEventListener('DOMContentLoaded', function () {
-            const errorMessages = document.getElementById('error-messages');
-
-            // Check if there are any error messages
-            if (errorMessages && errorMessages.childElementCount > 0) {
-                // Display the error messages
-                errorMessages.style.display = 'block';
-
-                // Set a timeout to hide the messages after 2 seconds
-                setTimeout(() => {
-                    errorMessages.style.display = 'none';
-                }, 2000);
-            }
-
-            // Add an event listener to the form to hide messages when submitting
-            document.getElementById('login-form').addEventListener('submit', function() {
-                errorMessages.style.display = 'none'; // Hide error messages when form is submitted
-            });
-        });
-    </script>
 
 </body>
+<script src="/assets/js/login.js"></script>
+
 </html>

@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 
-
-/* Adjust the width of the input fields and the container */
-.form-control {
-    max-width: 400px; /* Set max-width for input fields */
+.register-container, .login-container{
+    max-width: 900px; 
 }
-.box-area {
-    max-width: 600px; /* Adjust the overall box width */
+body {
+    background: linear-gradient(135deg, #6D83F2, #4AB3E6, #72E2F7);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
